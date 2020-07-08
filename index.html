@@ -17,23 +17,74 @@
     <div id="side-nav">
         <img src = "../resources/libra-logo.png" id="icon">
         <ul class="nav">
-            <li><a class="nav-tab" href="about.html">Libra Home</a></li> 
+            <li class="nav-tab selected" href="index.html">About</li>
             
             <li><a class="nav-tab" href="/html/started.html">Getting Started</a></li> 
             
-            <li class="nav-tab selected" href="index.html">Developer Guides</li>
-                <div>
-                    <li class="dropdown-item selected">Providing Instructions to Libra</li>
-                </div>
+            <li><a class="nav-tab" href="/html/devGuides.html">Developer Guides</a></li> 
             
-            <li><a class="nav-tab" href="/html/modeling.html">Modeling Queries</a></li>
+            <li><a class="nav-tab" href="/html/modeling.html">Modeling Queries</a></li>    
             
             <li><a class="nav-tab" href="/html/nlp.html">NLP Queries</a></li>
-    
         </ul>
     </div>
-    <div id="nav-bar">Developer Guides</div>
-     <div id="content">
-<!--    insert page content here-->
-    </div>
+    <div id="nav-bar">About</div>
+    <div id="content">
+          <h1 id="why-choose-keras">Why choose Keras?</h1>
+<p>There are many deep learning frameworks available today. Why use Keras rather than any other?</p>
+<p>Here are some of the areas in which Keras compares favorably to existing alternatives.</p>
+<hr>
+<h2 id="keras-prioritizes-developer-experience">Keras prioritizes developer experience</h2>
+<ul>
+<li>Keras is an API designed for human beings, not machines. <a href="https://blog.keras.io/user-experience-design-for-apis.html">Keras follows best practices for reducing cognitive load</a>: it offers consistent &amp; simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear and actionable feedback upon user error.</li>
+<li>This makes Keras easy to learn and easy to use. As a Keras user, you are more productive, allowing you to try more ideas than your competition, faster -- which in turn <a href="https://www.quora.com/Why-has-Keras-been-so-successful-lately-at-Kaggle-competitions">helps you win machine learning competitions</a>.</li>
+<li>This ease of use does not come at the cost of reduced flexibility: because Keras integrates deeply with low-level TensorFlow functionality, it enables you to develop highly hackable workflows where any piece of functionality can be customized.</li>
+</ul>
+<p>In early 2019, we ran a survey among teams that ended in the top 5 of any Kaggle competition in the two previous years (N=120). We asked them about:</p>
+<ol>
+<li>The <em>primary</em> machine learning framework they used in the competition where they made it to the top 5.</li>
+<li>All frameworks (primary and auxiliary) they used.</li>
+</ol>
+<p>Keras ranked as #1 for deep learning both among primary frameworks and among all frameworks used.</p>
+<p><img alt="Primary ML frameworks used by top-5 teams on Kaggle" src="/img/graph-kaggle-1.jpeg"></p>
+<p><img alt="All ML frameworks used by top-5 teams on Kaggle" src="/img/graph-kaggle-2.jpeg"></p>
+<hr>
+<h2 id="keras-has-broad-adoption-in-the-industry-and-the-research-community">Keras has broad adoption in the industry and the research community</h2>
+<p>With over 375,000 individual users as of early 2020, Keras has strong adoption across both the industry and the research community. Together with TensorFlow 2.0, Keras has more adoption than any other deep learning solution -- in every vertical.</p>
+<p>You are already constantly interacting with features built with Keras -- it is in use at Netflix, Uber, Yelp, Instacart, Zocdoc, Square, and many others. It is especially popular among startups that place deep learning at the core of their products.</p>
+<p>Keras &amp; TensorFlow 2.0 are also a favorite among researchers, coming in #1 in terms of mentions in scientific papers indexed by Google Scholar. Keras has also been adopted by researchers at large scientific organizations, such as CERN and NASA.</p>
+<p><img alt="Daily PyPI downloads" src="/img/graph-downloads.jpg"></p>
+<p><img alt="Weekly Google Scholar articles" src="/img/graph-scholar.jpeg"></p>
+<hr>
+<h2 id="keras-makes-it-easy-to-turn-models-into-products">Keras makes it easy to turn models into products</h2>
+<p>Your Keras models can be easily deployed across a greater range of platforms than any other deep learning API:</p>
+<ul>
+<li>On server via a Python runtime or a Node.js runtime</li>
+<li>On server via TFX / TF Serving</li>
+<li>In the browser via TF.js</li>
+<li>On Android or iOS via TF Lite or Apple's CoreML</li>
+<li>On Raspberry Pi, on Edge TPU, or another embedded system</li>
+</ul>
+<hr>
+<h2 id="keras-has-strong-multigpu-amp-distributed-training-support">Keras has strong multi-GPU &amp; distributed training support</h2>
+<p>Keras is scalable. Using the <a href="https://www.tensorflow.org/tutorials/distribute/keras">TensorFlow <code>DistributionStrategy</code> API</a>, which is supported natively by Keras,
+you easily can run your models on large GPU clusters (up to thousands of devices) or an entire TPU pod, representing over one exaFLOPs of computing power.</p>
+<p>Keras also has native support for mixed-precision training on the latest NVIDIA GPUs as well as on TPUs, which can offer up to 2x speedup for training and inference.</p>
+<p>For more information, see our <a href="/guides/distributed_training/">guide to multi-GPU &amp; distributed training</a>.</p>
+<hr>
+<h2 id="keras-is-at-the-nexus-of-a-large-ecosystem">Keras is at the nexus of a large ecosystem</h2>
+<p>Like you, we know firsthand that building and training a model is only one slice of a machine learning workflow. Keras is built for the real world,
+and in the real world, a successful model begins with data collection and ends with production deployment. </p>
+<p>Keras is at the center of a wide ecosystem of tightly-connected projects that together cover every step of the machine learning workflow, in particular:</p>
+<ul>
+<li>Rapid model prototyping with <a href="https://autokeras.com/">AutoKeras</a></li>
+<li>Scalable model training in on GCP via <a href="https://github.com/tensorflow/cloud">TF Cloud</a></li>
+<li>Hyperparameter tuning with <a href="https://keras-team.github.io/keras-tuner/">Keras Tuner</a></li>
+<li>Extra layers, losses, metrics, callbacks... via <a href="https://www.tensorflow.org/addons/api_docs/python/tfa">TensorFlow Addons</a></li>
+<li>Inference model quantization &amp; pruning with the <a href="https://www.tensorflow.org/model_optimization">TF Model Optimization Toolkit</a></li>
+<li>Model deployment on mobile or on an embedded with <a href="https://www.tensorflow.org/lite">TF Lite</a></li>
+<li>Model deployment in the browser via <a href="https://www.tensorflow.org/js">TF.js</a></li>
+<li>...and many more.</li>
+</ul>
+        </div>
 </body>
