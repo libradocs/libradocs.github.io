@@ -24,7 +24,7 @@ window.addEventListener('scroll', function(e) {
     var dds = document.getElementsByClassName("box");
     var i;
     for(i = 0; i<dds.length; i++){
-        if(window.scrollY +100 < (dds[i].offsetHeight + dds[i].offsetTop)){
+        if(window.scrollY +300 < (dds[i].offsetHeight + dds[i].offsetTop)){
             color(i);
             return;
         }
