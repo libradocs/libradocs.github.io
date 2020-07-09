@@ -32,23 +32,20 @@
     <div id="content">
           <h1 id="on-github-issues-and-pull-requests">On Github Issues and Pull Requests</h1>
 <p>Found a bug? Have a new feature to suggest?
-Want to add a new code examples to keras.io, or to contribute changes to the codebase?
-Make sure to read this first.</p>
+Want to add a new code examples to libra? or to contribute changes to the codebase?
+Make sure you're following these guidelines.</p>
 <hr>
 <h2 id="bug-reporting">Bug reporting</h2>
-<p>Your code doesn't work, and you have determined that the issue lies with Keras? Follow these steps to report a bug.</p>
+<p>If there is an issue that persists, with Libra or any of its dependencies, we're here to support you. </p>
 <ol>
 <li>
-<p>Your bug may already be fixed. Make sure to update to the current TensorFlow nightly release (<code>pip install tf-nightly --upgrade</code>) and test whether your bug is still occurring.</p>
+<p>Make sure your bug isn't already being worked on. Check the contribution queue and the issues backlog. If you don't see anything create an issue and we'll get back to you. </p>
 </li>
 <li>
-<p>Search for similar issues among the <a href="https://github.com/tensorflow/tensorflow/issues">Tensorflow Github issues</a>. Make sure to delete <code>is:open</code> on the issue search to find solved tickets as well. It's possible somebody has encountered this bug already. Also remember to check out Keras' <a href="http://keras.io/getting-started/faq/">FAQ</a>. Still having a problem? Open an issue on the TensorFlow Github to let us know.</p>
+<p>Make sure you provide us with enough information for us to reproduce the bug. What version of libra are you using? What IDE are you using to run your code? What does your dataset and instruction look like?</p>
 </li>
 <li>
-<p>Make sure you provide us with useful information about your configuration: what OS are you using? What version of TensorFlow are you using? Are you running on GPU? If so, what is your version of Cuda, of cuDNN? What is your GPU?</p>
-</li>
-<li>
-<p>Provide us with a script to reproduce the issue. This script should be runnable as-is and should not require external data download (use randomly generated data if you need to run a model on some test data). We recommend that you use Github Gists to post your code. Any issue that cannot be reproduced is likely to be closed.</p>
+<p>Provide us with a script to reproduce the issue. This can be a script that's loaded up onto GitHub gists. We also will accept google collaboratory links.</p>
 </li>
 <li>
 <p>If possible, take a stab at fixing the bug yourself --if you can!</p>
@@ -57,7 +54,7 @@ Make sure to read this first.</p>
 <p>The more information you provide, the easier it is for us to validate that there is a bug and the faster we'll be able to take action. If you want your issue to be resolved quickly, following the steps above is crucial.</p>
 <hr>
 <h2 id="requesting-a-feature">Requesting a Feature</h2>
-<p>You can use <a href="https://github.com/tensorflow/tensorflow/issues">Tensorflow Github issues</a> to request features you would like to see in Keras, or changes in the Keras API.</p>
+<p>Create an issue with the prefix feature:: and we'll get back to you immediately. If your change is fairly large and involves large structural changes shoot us an email at libradevteam@gmail.com</p>
 <ol>
 <li>
 <p>Provide a clear and detailed explanation of the feature you want and why it's important to add. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on library for Keras. It is crucial for Keras to avoid bloating the API and codebase.</p>
@@ -67,19 +64,8 @@ Make sure to read this first.</p>
 </li>
 </ol>
 <hr>
-<h2 id="proposing-a-design-for-a-new-api">Proposing a design for a new API</h2>
-<p>If you interested in adding a new API (such as a new layer or optimizer), you should go through the <a href="https://github.com/keras-team/governance#design-review-process">Keras design review process</a>,
-managed by the Keras SIG.</p>
-<hr>
-<h2 id="submitting-a-pull-request">Submitting a Pull Request</h2>
-<ol>
-<li><strong>Keras improvements and bugfixes</strong> go to the <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/python/keras">Keras subdirectory on the TensorFlow repository</a>.</li>
-<li><strong>Experimental new features</strong> such as new layers, metrics &amp; losses, callbacks, or activation functions go to <a href="https://github.com/tensorflow/addons">TF Addons</a>.</li>
-</ol>
-<p>Please note that PRs that are primarily about <strong>code style</strong> (as opposed to fixing bugs, improving docs, or adding new functionality) will likely be rejected.</p>
-<hr>
 <h2 id="adding-new-examples">Adding new examples</h2>
-<p>Even if you don't contribute to the Keras source code, if you have an application of Keras that is concise and powerful, please consider adding it to our collection of examples, featured on keras.io. 
+<p>Even if you don't contribute to the Libra source code, if you have an application of Libra that is concise and powerful, please consider adding it to our collection of examples, that will be collected in the tools folder of our main github repo.
 <a href="/examples/#adding-a-new-code-example">Follow these steps</a> to submit a new code examples.</p>
         </div>
 </body>s
