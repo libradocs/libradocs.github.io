@@ -106,9 +106,9 @@
                         <td>Where do you want the save_model information to be stored. Default is current working directory.</td>
                     </tr>
                 </table>
-                <pre>new_client = client('path_to_dataset')
-new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+                <pre>new_client = client('path_to_csv')
+new_client.text_classification_query('Please estimate the sentiment')
+new_client.classify_text('new text to classify') #access plots</pre>
         </div>
         <div class="box">
                 <h1 id="rff">summarization_query()</h1>
@@ -161,8 +161,9 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                         <td>Where do you want the save_model information to be stored. Default is current working directory.</td>
                     </tr>
                 </table>
-                <pre>newClient = client('path_to_directory_with_image_folders')
-newClient.convolutional_query("Please classify my images")</pre>
+                <pre>newClient = client('path_to_csv')
+newClient.summarization_query("Please summarize original text")</pre>
+newClient.get_summary('new text to summarize')
         </div>
         <div class="box">
                 <h1 id="pca">image_caption_query()</h1>
@@ -212,9 +213,9 @@ newClient.convolutional_query("Please classify my images")</pre>
                     </tr>
 
                 </table>
-                <pre>newClient = client('path_to_file')
-newClient.text_classification_query('Model credit card transaction type')
-newClient.predict_text_sentiment('new_text_to_classify')</pre>
+                <pre>newClient = client('path_to_csv')
+newClient.image_caption_query('Generate image captions')
+newClient.generate_caption('path to image')</pre>
 
         </div>
 </body>
