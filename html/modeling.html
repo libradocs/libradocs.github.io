@@ -25,10 +25,11 @@
 
             <li class="nav-tab selected" href="modeling.html">Modeling Queries</li>    
                 <li class="dropdown-item selected" data="nnq">Neural Network</li>
-                <li class="dropdown-item" data="cq">Convolutional</li>
-                <li class="dropdown-item" data="tcq">Text Classification</li>
-                <li class="dropdown-item" data="sq">Summarization</li>
-                <li class="dropdown-item" data="kmcq">K Mean Clustering</li> 
+                <li class="dropdown-item" data="cq">Convolutional Neural Network</li>
+                <li class="dropdown-item" data="tcq">Support Vector Machine</li>
+                <li class="dropdown-item" data="sq">Nearest Neighbors</li>
+                <li class="dropdown-item" data="sq">Decision Tree</li>
+                <li class="dropdown-item" data="kmcq">K-Means Clustering</li> 
                                  
             
             <li><a class="nav-tab" href="nlp.html">NLP Queries</a></li>
@@ -62,6 +63,10 @@
                         <td>Columns to drop manually, drop columns with links, weirdly formatted numbers, and others.</td>
                     </tr>
                     <tr>
+                        <td>text=[]</td>
+                        <td>List of columns that are long sections of text, which need word embeddings.</td>
+                    </tr>
+                    <tr>
                         <td>Preprocess=True</td>
                         <td>Whether you want your dataset to be intelligently preprocessed</td>
                     </tr>
@@ -71,7 +76,7 @@
                     </tr>
                     <tr>
                         <td>Random_state=49</td>
-                        <td>The state ticker you want to be set at</td>
+                        <td>The state ticker you want to be set at.</td>
                     </tr>
                     <tr>
                         <td>epochs=50</td>
@@ -140,9 +145,9 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
 newClient.convolutional_query("Please classify my images")</pre>
             </div>
             <div class="box">
-                <h1 id="tcq">text_classification_query()</h1>
+                <h1 id="tcq">svm_query()</h1>
                 <br>
-                <p>Lets you create a text classification model automatically; works for all sorts of situations like sentiment analysis.</p>
+                <p>Automatically fits a support vector machine to your dataset. Only classification is supported. SVRegressor will be coming soon. Target detection, preprocessing, and scoring are done by default.</p>
                 <br>
                 <table>
                     <tr>
@@ -152,14 +157,53 @@ newClient.convolutional_query("Please classify my images")</pre>
                         <td>Instruction</td>
                         <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
                     </tr>
+                    <tr>
+                        <td>test_size=0.2</td>
+                        <td>The proportion of your entire dataset that is used for testing.</td>
+                    </tr>
+                    <tr>
+                        <td>text=[]</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                    </tr>
+                    <tr>
+                        <td>random_state=49</td>
+                        <td>The state ticker you want to be set at</td>
+                    </tr>
+                    <tr>
+                        <td>kernel='linear'</td>
+                        <td>The type of kernel trick you want to be used. Options include 'rbf' and 'poly'. </td>
+                    </tr>
+                    <tr>
+                        <td>preprocess=True</td>
+                        <td>Whether you want your dataset to be intelligently preprocessed</td>
+                    </tr>
+                    <tr>
+                        <td>drop=[]</td>
+                        <td>Columns to drop manually, drop columns with links, weirdly formatted numbers, and others.</td>
+                    </tr>
+                    <tr>
+                        <td>degree=3</td>
+                        <td>Degree of the polynomial kernel function. Only used by 'poly' kernel.</td>
+                    </tr>
+                    <tr>
+                        <td>gamma='scale'</td>
+                        <td>Kernel coefficient for 'rbf', 'poly' and 'sigmoid'.</td>
+                    </tr>
+                    <tr>
+                        <td>coef0=0.0</td>
+                        <td>Independent term in kernel function. It is only significant in ‘poly’ and ‘sigmoid’.</td>
+                    </tr>
+                    <tr>
+                        <td>max_iter=1</td>
+                        <td>Hard limit on iterations within solver, or -1 for no limit.</td>
+                    </tr>
                 </table>
                 <pre>newClient = client('path_to_file')
-newClient.text_classification_query('Model credit card transaction type')
-newClient.predict_text_sentiment('new_text_to_classify')</pre>
+newClient.svm_query('Model the type of credit card')</pre>
 
             </div>
             <div class="box">
-                <h1 id="sq">summarization_query()</h1>
+                <h1 id="sq">nearest_neighbor_query()</h1>
                 <br>
                 <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
                 <br>
@@ -169,11 +213,51 @@ newClient.predict_text_sentiment('new_text_to_classify')</pre>
                     </tr>
                     <tr>
                         <td>Instruction</td>
-                        <td>An English language statement of what you’d like to do, eg: predict the median house value</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                    </tr>
+                    <tr>
+                        <td>test_size=0.2</td>
+                        <td>The proportion of your entire dataset that is used for testing.</td>
+                    </tr>
+                    <tr>
+                        <td>text=[]</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                    </tr>
+                    <tr>
+                        <td>random_state=49</td>
+                        <td>The state ticker you want to be set at</td>
+                    </tr>
+                   <tr>
+                        <td>preprocess=True</td>
+                        <td>Whether you want your dataset to be intelligently preprocessed</td>
+                    </tr>
+                    <tr>
+                        <td>drop=[]</td>
+                        <td>Columns to drop manually, drop columns with links, weirdly formatted numbers, and others.</td>
+                    </tr>
+                    <tr>
+                        <td>min_neighbors=3</td>
+                        <td>The minimum number of nearest neighbors to calculate the loss with. </td>
+                    </tr>
+                    <tr>
+                        <td>max_neighbors=3</td>
+                        <td>The maximum number of nearest neighbors to calculate the loss with. </td>
+                    </tr>
+                    <tr>
+                        <td>leaf_size=30</td>
+                        <td>Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. </td>
+                    </tr>
+                    <tr>
+                        <td>p=2</td>
+                        <td>Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. </td>
+                    </tr>
+                    <tr>
+                        <td>algorithm='auto'</td>
+                        <td>Algorithm used to compute the nearest neighbors: ‘ball_tree’ will use BallTree, ‘kd_tree’ will use KDTree, ‘brute’ will use a brute-force search, ‘auto’ will attempt to decide the most appropriate algorithm based on the values passed to fit method.</td>
                     </tr>
                 </table>
-                <pre>print("hello world")
-//random code stuff here, tabs are important though</pre>
+                <pre>newClient = client('path_to_file')
+newClient.nearest_neighbors_query('Model the type of credit card')</pre>
             </div>
             <div class="box">
                 <h1 id="kmcq">kmeans_clustering_query()</h1>
