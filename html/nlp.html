@@ -25,7 +25,7 @@
             <li><a class="nav-tab" href="modeling.html">Modeling Queries</a></li>
 
             <li class="nav-tab selected" href="nlp.html">NLP Queries</li>
-                <li class="dropdown-item selected" data="drp">Dimensionality Reduction Pipeline</li>
+                <li class="dropdown-item selected" data="drp">Text Classification</li>
                 <li class="dropdown-item" data="rff">Random Forest Feature</li>
                 <li class="dropdown-item" data="pca">Principal Component Analysis</li>
                 <li class="dropdown-item" data="ica">Independent Component Analysis</li>
@@ -36,9 +36,9 @@
     <div id="nav-bar">Natural Language Processing Queries</div>
     <div id="content">
         <div class="box">
-            <h1 id="drp">dimensionality_reduction_pipeline()</h1>
+            <h1 id="drp">text_classification_query()</h1>
                 <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
+                <p>Automatically fits a text classification model to your dataset. All standard text modification procedures are applied automatically if applicable..</p>
                 <b>Only instruction is required. ALL other parameters are optional</b>
                 <br>
                 <br>
@@ -51,44 +51,60 @@
                         <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
                     </tr>
                     <tr>
-                        <td>Mca_threshold=0.2</td>
-                        <td>Changes the proportion at which multiple correspondence analysis is applied. This deals with reducing the number of categorical features that are one-hot-encoded.</td>
+                        <td>preprocess=True</td>
+                        <td>Whether you want your dataset to be intelligently preprocessed.</td>
                     </tr>
                     <tr>
-                        <td>Drop=[]</td>
-                        <td>Columns to drop manually, drop columns with links, weirdly formatted numbers, and others.</td>
+                        <td>test_size=0.2</td>
+                        <td>The proportion of your entire dataset that is used for testing. </td>
                     </tr>
                     <tr>
-                        <td>Preprocess=True</td>
-                        <td>Whether you want your dataset to be intelligently preprocessed</td>
+                        <td>random_state=49</td>
+                        <td>The randomization channel that you want to be set at.</td>
                     </tr>
                     <tr>
-                        <td>Test_size=0.2</td>
-                        <td>The size of your testing dataset</td>
+                        <td>learning_rate=1e-2</td>
+                        <td>The default rate at which your model learns based on gradient descent./td>
                     </tr>
                     <tr>
-                        <td>Random_state=49</td>
-                        <td>The state ticker you want to be set at</td>
+                        <td>epochs=20</td>
+                        <td>Number of epochs. This is for every model that's created in the process.</td>
                     </tr>
                     <tr>
                         <td>epochs=50</td>
                         <td>Number of epochs for every model attempted</td>
                     </tr>
                     <tr>
-                        <td>generate_plots=True</td>
-                        <td>Whether you want libra to create accuracy and loss plots for you. </td>
+                        <td>monitor='val_loss'</td>
+                        <td>The parameter that you want the query to minimize/maximize. For example, the default setting will try to minimize your validation loss.</td>
                     </tr>
                     <tr>
                         <td>generate_plots=True</td>
                         <td>Whether you want libra to create accuracy and loss plots for you. </td>
+                    </tr>
+                    <tr>
+                        <td>batch_size=32</td>
+                        <td>The number of dataset points that will be provided to your model in every pass.</td>
+                    </tr>
+                    <tr>
+                        <td>max_text_length=200</td>
+                        <td>The maximum amount of text that can be used to classify. If larger, it will cut off the rest.</td>
+                    </tr>
+                    <tr>
+                        <td>max_features=20000</td>
+                        <td>The size of the input embedding layer in the model.</td>
+                    </tr>
+                    <tr>
+                        <td>generate_plots=True</td>
+                        <td>Whether you want libra to create accuracy and loss plots for you.</td>
                     </tr>
                     <tr>
                         <td>save_model=False</td>
-                        <td> Do you want the model weights and architecture to be saved as a .json and .h5 file.</td>
+                        <td>Do you want the model weights and architecture to be saved as a .json and .h5 file.</td>
                     </tr>
                     <tr>
-                        <td>save_path='current_directory'</td>
-                        <td>Where do you want the save_model information to be stored. </td>
+                        <td>save_path=os.getcwd()</td>
+                        <td>Where do you want the save_model information to be stored. Default is current working directory.</td>
                     </tr>
                 </table>
                 <pre>new_client = client('path_to_dataset')
