@@ -26,7 +26,7 @@ window.addEventListener('scroll', function(e) {
     for(i = 0; i<dds.length; i++){
         if(window.scrollY +300 < (dds[i].offsetHeight + dds[i].offsetTop)){
             color(i);
-            return;
+            break;
         }
     }
 });

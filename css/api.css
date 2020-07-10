@@ -35,7 +35,7 @@ td{
     color: #393939;
 }
 
-td:nth-child(2){
+td{
     background-color: rgb(240, 252, 255);
 }
 
@@ -44,6 +44,6 @@ td:nth-child(1){
     font-weight: bold;
 }
 
-td:nth-child(1)[colspan = "2"]{
+td:nth-child(1)[colspan = "2"], td:nth-child(1)[colspan = "3"]{
     background-color: rgb(194, 241, 255);
 }

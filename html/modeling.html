@@ -107,13 +107,13 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                 <h1 id="cq">convolutional_query()</h1>
                 <br>
                 <p>Automatically fits a Convolutional Neural Network to your dataset. Everything is handled by libra internally. Three types of dataset structures are detectable: 
-                    <br>
-                    <br>
-1) classwise: where every folder represents a seperate class of images 
-<br>
-2) setwise: where a training_set and testing_set folder are created with individually folders of classes
-<br>
-3) pathwise: where a csv file stores relative paths to images
+                <br>
+                <br>
+                1) classwise: where every folder represents a seperate class of images 
+                <br>
+                2) setwise: where a training_set and testing_set folder are created with individually folders of classes
+                <br>
+                3) pathwise: where a csv file stores relative paths to images
                 </p>
                 <br>
                 <table>
@@ -126,7 +126,7 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                     </tr>
                     <tr>
                         <td>readmode=distinguisher()</td>
-                        <td>Identifies the format in which data the present in. If none is specified then the query will automatically identify the format of your data. Note that only three types of formats are supported currently. </td>
+                        <td>Identifies the format in which data the present in. If none is specified then the query will automatically identify the format of your data. Note that only three types of formats are supported currently (listed in the table below). </td>
                     </tr>
                     <tr>
                         <td>new_folders=True</td>
@@ -143,6 +143,34 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                 </table>
                 <pre>newClient = client('path_to_directory_with_image_folders')
 newClient.convolutional_query("Please classify my images")</pre>
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="3">Read Modes</td>
+                    </tr>
+                    <tr>
+                        <td>'setwise'</td>
+                        <td>Directory consists of a ‘training_set’ and ‘testing_set’ folder both containing classification folders with images inside.
+                        </td>
+                        <td>
+                            <img src="../resources/setwise.png" style="width: 300px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>'classwise'</td>
+                        <td>Directory consists of classification folders with images inside.</td>
+                        <td>
+                            <img src="../resources/classwise.png" style="width: 300px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>'csvwise'</td>
+                        <td>Directory consists of image folders and a CSV file that has an image column.</td>
+                        <td>
+                            <img src="../resources/csvwise.png" style="width: 300px;">
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="box">
                 <h1 id="tcq">svm_query()</h1>
