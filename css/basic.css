@@ -1,5 +1,5 @@
 body{
-    height: 2000px;
+    height: auto;
     font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
 }
@@ -111,4 +111,8 @@ h2{
     font-weight: 400;
     font-size: 30px;
     color: rgb(0, 125, 217);
+}
+
+#space{
+    height: 300px;
 }
