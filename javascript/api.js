@@ -1,8 +1,12 @@
+if(screen.width < 1400){
+   document.documentElement.style.setProperty("--zoom-scale", screen.width/1400);
+}
+
 $(function(){
     $(".dropdown-item").click(function(){
         $([document.documentElement, document.body]).stop();
         $([document.documentElement, document.body]).animate({
-            scrollTop: $("#" + $(this).attr("data")).offset().top - 115
+            scrollTop: ($("#" + $(this).attr("data")).position().top - 45)*getComputedStyle(document.documentElement).getPropertyValue('--zoom-scale')
         }, 500);
     });    
 });
@@ -24,7 +28,7 @@ window.addEventListener('scroll', function(e) {
     var dds = document.getElementsByClassName("box");
     var i;
     for(i = 0; i<dds.length; i++){
-        if(window.scrollY +300 < (dds[i].offsetHeight + dds[i].offsetTop)){
+        if((window.scrollY +300)/getComputedStyle(document.documentElement).getPropertyValue('--zoom-scale') < (dds[i].offsetHeight + dds[i].offsetTop)){
             color(i);
             break;
         }
