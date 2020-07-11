@@ -14,11 +14,11 @@ h1{
     padding: 30px;
     padding-top: 20px;
     border-radius: 15px;
-    background-image: linear-gradient(to bottom, rgb(77, 193, 255) 70px, white 70px, white 100%);
+    background-image: linear-gradient(to bottom, rgb(56, 154, 237) 70px, white 70px, white 100%);
 }
 
 td {
-    border: 1px solid rgb(111, 194, 255);
+    border: 1px solid rgb(69, 148, 255);
     border-left: none;
     border-right: none;
     border-collapse: collapse;
@@ -36,14 +36,14 @@ td{
 }
 
 td{
-    background-color: rgb(240, 252, 255);
+    background-color: rgb(240, 247, 255);
 }
 
 td:nth-child(1){
-    background-color: rgb(220, 247, 255);
+    background-color: rgb(220, 235, 255);
     font-weight: bold;
 }
 
 td:nth-child(1)[colspan = "2"], td:nth-child(1)[colspan = "3"]{
-    background-color: rgb(194, 241, 255);
+    background-color: rgb(194, 229, 255);
 }

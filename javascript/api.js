@@ -14,6 +14,9 @@ $(function(){
 function color(index){ //indices start at 0
     var dds = document.getElementsByClassName("dropdown-item");
     var i;
+    if(dds.length <= index){
+        index=dds.length-1;
+    }
     for(i = 0; i<dds.length; i++){
         if(i == index){
             document.getElementsByClassName("dropdown-item")[i].classList.add("selected"); //add selected to the given index and remove from everything else
