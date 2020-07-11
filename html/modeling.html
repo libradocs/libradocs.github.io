@@ -114,17 +114,11 @@
 new_client.neural_network_query('Please estimate the number of households.')
 new_client.models['regression_ANN'].plots() #access plots</pre>
             </div>
-            <div class="box">
+             <div class="box">
                 <h1 id="cq">convolutional_query()</h1>
                 <br>
-                <p>Automatically fits a Convolutional Neural Network to your dataset. Everything is handled by libra internally. Three types of dataset structures are detectable: 
+                <p>Automatically fits a Convolutional Neural Network to your dataset. Images are automatically interpolated to the median height and wiedth. Three types of dataset structures are supported. Read below for more information. 
                 <br>
-                <br>
-                1) classwise: where every folder represents a seperate class of images 
-                <br>
-                2) setwise: where a training_set and testing_set folder are created with individually folders of classes
-                <br>
-                3) pathwise: where a csv file stores relative paths to images
                 </p>
                 <br>
                 <table>
@@ -137,7 +131,7 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                     </tr>
                     <tr>
                         <td>readmode=distinguisher()</td>
-                        <td>Identifies the format in which data the present in. If none is specified then the query will automatically identify the format of your data. Note that only three types of formats are supported currently (listed in the table below). </td>
+                        <td>Identifies the format in which data the present in. If none is specified then the query will automatically identify the format of your data. Note that only three types of formats are currently supported (listed in the table below). </td>
                     </tr>
                     <tr>
                         <td>new_folders=True</td>
