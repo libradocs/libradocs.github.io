@@ -123,8 +123,8 @@ h2{
 }
 
 #miniBox{
-    width: 270px;
-    height: 270px;
+    width: 290px;
+    height: 290px;
     border: 1px solid rgb(192, 228, 255);
     border-radius: 20px;
     overflow: hidden;
@@ -138,7 +138,7 @@ h2{
 
 #miniBox h3{
     margin:0px;
-    padding:10px;
+    padding:13px;
     width: inherit;
     height: 65px;
     background-color: white;
@@ -146,10 +146,10 @@ h2{
 }
 
 #miniBox p{
-    padding-left: 10px;
+    padding: 10px;
     position: absolute;
     width:inherit;
-    height: 65px;
+    height: 76px;
     background-color: white;
     border-bottom: 3px solid gray;
 }

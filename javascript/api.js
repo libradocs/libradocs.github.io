@@ -28,7 +28,7 @@ window.addEventListener('scroll', function(e) {
     var dds = document.getElementsByClassName("box");
     var i;
     for(i = 0; i<dds.length; i++){
-        if((window.scrollY +300)/getComputedStyle(document.documentElement).getPropertyValue('--zoom-scale') < (dds[i].offsetHeight + dds[i].offsetTop)){
+        if((window.scrollY +50)/getComputedStyle(document.documentElement).getPropertyValue('--zoom-scale') < (dds[i].offsetHeight + dds[i].offsetTop)){
             color(i);
             break;
         }
