@@ -121,3 +121,37 @@ h2{
 #space{
     height: 350px;
 }
+
+#miniBox{
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgb(192, 228, 255);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px #a8d7ff;
+    margin: 30px;
+    margin-left: 0px;
+    box-sizing: content-box;
+    float: left;
+}
+
+#miniBox h3{
+    margin:0px;
+    padding:10px;
+    width: inherit;
+    height: 65px;
+    background-color: white;
+}
+
+#miniBox p{
+    padding-left: 10px;
+    position: absolute;
+    width:inherit;
+    height: 65px;
+    background-color: white;
+    border-bottom: 3px solid gray;
+}
+
+#minibox:hover{
+    
+}
