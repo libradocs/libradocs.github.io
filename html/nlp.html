@@ -43,9 +43,8 @@
                 <p> <b>Dataset Guidelines</b> </p>
                 <ul>
                     <li>One column in the file should contain the text to be classified</li>
-                    <li>One column should contain the label of each text</li>
-                    <li>Your instruction should be about the label column, not the text.</li>
-                    <li>NO other columns should be in the csv file.</li>
+                    <li>One column should contain the label of each text and SHOULD BE NAMED LABEL. If is named something else, please specify the name with the label_column parameter. </li>
+                    <li>Your instruction should be about the text you want to classify, for example in a problem where you have a tweet column (with the text) and a sentiment column (with 0-2 representing mood) your instruction should be about the tweet: 'please perform analysis on tweets'.</li>
 
                 </ul>
                 <br>
@@ -56,6 +55,10 @@
                     <tr>
                         <td>instruction=None</td>
                         <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                    </tr>
+                    <tr>
+                        <td>label_column='label'</td>
+                        <td>Represents the column name in which your label exists. If the name is already similar to 'label' then this parameter is not required.</td>
                     </tr>
                     <tr>
                         <td>preprocess=True</td>
