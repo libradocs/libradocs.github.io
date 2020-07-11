@@ -65,15 +65,16 @@
         </div>
                 
         <div  class="box" id="uta">
-            <h2>Understanding the API</h2>
-            <p>We recommend using Google Collaboratory, as it supports intensive processing and configures an enviroment for you.</p>
-            <ul>
-                <li>Make sure you have a google account and open up a notebook in collab.</li>
-                <li>Use !pip install libra to get all the package information</li>
-
-                You're ready to go! Note that here you'll have to upload your files for storage manually.
-            </ul>
-            <hr>
+        <h2>Understanding the API's structure</h2>
+        <p>There's two structural principles that a user should understand about libra</p>
+        <ul>
+            <li><b>Everything</b> is built around the client object. You can call different queries on it and everything will be stored under the models field of the object.</li>
+            <li>You can access all the information as a dictionary. Doing client_object.models['svm'] gets you all the information generated for the svm query.</li>
+            <li>Your latest model called will automatically be the default. If you call client_object.plots() and don't specify a model, the model for the most recent query that you've called WILL be used. Currently only one model of each type is supported by libra.</li>
+            
+            Direct any other questions to the Github or libradevteam@gmail.com
+        </ul>
+        <hr>
         </div>
         
         <div class="box" id="lr">
