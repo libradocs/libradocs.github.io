@@ -37,20 +37,26 @@
     <div id="nav-bar">Utility Functions</div>
     <div id="content">
         <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
+                <h1 id="nnq">analyze()</h1>
                 <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
-                <b>Only instruction is required. ALL other parameters are optional</b>
-                <br>
+                <p>Generates in-depth statistics about your dataset. Creates confusion matrix and ROC Curve for all classification problems. Also calculates recall, precision, f1, and f2 score. For regression problems, this function will calculate MSE, MAE, and other important statistics. </p>
                 <br>
                 <table>
                     <tr>
                         <td colspan="2">Arguments</td>
                     </tr>
                     <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>model=latest_model</td>
+                        <td>The model that you want to analyze. If you want to call on the latest model, this parameter does not need to be specified.</td>
                     </tr>   
+                    <tr>
+                        <td>save_model=False</td>
+                        <td>Whether you want to save your model. Will generate a .json and a .h5 file.</td>
+                    </tr>   
+                    <tr>
+                        <td>save=True</td>
+                        <td>Whether you want to save the plots that are generated as .png files.</td>
+                    </tr>  
                 </table>
                 <pre>new_client = client('path_to_dataset')
 new_client.neural_network_query('Please estimate the number of households.')
