@@ -41,6 +41,14 @@
                 <br>
                 <p>Automatically fits a text classification model to your dataset. All standard text modification procedures are applied automatically if applicable..</p>
                 <b>Only instruction is required. ALL other parameters are optional</b>
+                <p> Dataset Guidelines </p>
+                <ul>
+                    <li>One column in the file should contain the text to be classified</li>
+                    <li>One column should contain the label of each text</li>
+                    <li>Your instruction should be about the label column, not the text.</li>
+                    <li>NO other columns should be in the csv file.</li>
+
+                </ul>
                 <br>
                 <br>
                 <table>
@@ -115,8 +123,14 @@ new_client.classify_text('new text to classify') #access plots</pre>
         <div class="box">
                 <h1 id="rff">summarization_query()</h1>
                 <br>
-                <p>Automatically fits a Document Summarization transfer learning model to your dataset. This model will have frozen layers with pretrained weights to help with small dataset sizes.
+                <p>Automatically fits a Document Summarization model to your dataset. This model will have frozen layers with pretrained weights to help with small dataset sizes.
                 </p>
+                <p> Dataset Guidelines </p>
+                <ul>
+                    <li>The data that you want to summarized should be the target of the instruction. So if you want to summarize tweets, the instruction could be 'summarize long textual tweets'. </li>
+                    <li>The result, or the summary should be in a column called 'summary'. <b>THIS IS ESSENTIAL.</b></li>
+                    <li>Your instruction should be about the label column, not the text.</li>
+                </ul>
                 <br>
                 <table>
                     <tr>
@@ -171,6 +185,11 @@ newClient.get_summary('new text to summarize')</pre>
                 <h1 id="pca">image_caption_query()</h1>
                 <br>
                 <p>Automatically fits an caption generation transfer learning model to your dataset. This model will have frozen layers with pretrained weights to help with small dataset sizes.</p>
+                <p> Dataset Guidelines </p>
+                <ul>
+                    <li>One column in the file should be that path to the images. This will be found automatically.</li>
+                    <li>The target of your instruction should be the caption column. So, maybe if your caption column is called short tweets, have your instruction be 'please shorten this text into short tweets'.</li>
+                </ul>
                 <br>
                 <table>
                     <tr>
