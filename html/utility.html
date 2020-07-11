@@ -78,7 +78,7 @@ new_client.analyze()</pre>
                 </table>
                 <pre>new_client = client('path_to_dataset')
 new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+new_client.info() #access plots</pre>
         </div>
         <div class="box">
                 <h1 id="nnq">plots()</h1>
@@ -106,7 +106,7 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                 </table>
                 <pre>new_client = client('path_to_dataset')
 new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+new_client.plots() #access plots</pre>
         </div>
         <div class="box">
                 <h1 id="nnq">vocab()</h1>
@@ -118,16 +118,20 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                         <td colspan="2">Arguments</td>
                     </tr>
                     <tr>
+                        <td>data</td>
+                        <td>The data that you want to predict for this model.</td>
+                    </tr>    
+                    <tr>
                         <td>model=latest_model</td>
                         <td>The model that you want to analyze. If you want to call on the latest model, this parameter does not need to be specified.</td>
-                    </tr>    
+                    </tr>  
                 </table>
                 <pre>new_client = client('path_to_dataset')
-new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+new_client.summarization_query('csv_file')
+new_client.vocab() #access vocabulary</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
+                <h1 id="nnq">predict()</h1>
                 <br>
                 <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
                 <b>Only instruction is required. ALL other parameters are optional</b>
@@ -138,93 +142,31 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                         <td colspan="2">Arguments</td>
                     </tr>
                     <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>model=None</td>
+                        <td>The model that you want to analyze. If you want to call on the latest model, this parameter does not need to be specified.</td>
                     </tr>   
                 </table>
                 <pre>new_client = client('path_to_dataset')
 new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+new_client.predict(new_data, model='regression_ANN')</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
+                <h1 id="nnq">model()</h1>
                 <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
-                <b>Only instruction is required. ALL other parameters are optional</b>
-                <br>
+                <p>Returns the entire dictionary that a specific model.</p>
                 <br>
                 <table>
                     <tr>
                         <td colspan="2">Arguments</td>
                     </tr>
                     <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>model=latest_model</td>
+                        <td>The model that you want to analyze. If you want to call on the latest model, this parameter does not need to be specified.</td>
                     </tr>   
                 </table>
                 <pre>new_client = client('path_to_dataset')
 new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
-        </div>
-        <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
-                <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
-                <b>Only instruction is required. ALL other parameters are optional</b>
-                <br>
-                <br>
-                <table>
-                    <tr>
-                        <td colspan="2">Arguments</td>
-                    </tr>
-                    <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
-                    </tr>   
-                </table>
-                <pre>new_client = client('path_to_dataset')
-new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
-        </div>
-        <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
-                <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
-                <b>Only instruction is required. ALL other parameters are optional</b>
-                <br>
-                <br>
-                <table>
-                    <tr>
-                        <td colspan="2">Arguments</td>
-                    </tr>
-                    <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
-                    </tr>   
-                </table>
-                <pre>new_client = client('path_to_dataset')
-new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
-        </div>
-        <div class="box">
-                <h1 id="nnq">neural_network_query()</h1>
-                <br>
-                <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
-                <b>Only instruction is required. ALL other parameters are optional</b>
-                <br>
-                <br>
-                <table>
-                    <tr>
-                        <td colspan="2">Arguments</td>
-                    </tr>
-                    <tr>
-                        <td>Instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
-                    </tr>   
-                </table>
-                <pre>new_client = client('path_to_dataset')
-new_client.neural_network_query('Please estimate the number of households.')
-new_client.models['regression_ANN'].plots() #access plots</pre>
+new_client.model()['plots'] #access plots</pre>
         </div>
     </div>
 </body>
