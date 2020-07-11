@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="side-nav">
-        <img src = "../resources/libra-logo.png" id="icon">
+        <img src = "../resources/libraLogo.jpg" id="icon">
         <ul class="nav">
             <li><a class="nav-tab" href="../index.html">About</a></li>
             
@@ -36,8 +36,8 @@
     </div>
     <div id="nav-bar">Utility Functions</div>
     <div id="content">
-        <div class="box">
-                <h1 id="nnq">analyze()</h1>
+        <div class="box" id ="da">
+                <h1>analyze()</h1>
                 <br>
                 <p>Generates in-depth statistics about your dataset. Creates confusion matrix and ROC Curve for all classification problems. Also calculates recall, precision, f1, and f2 score. For regression problems, this function will calculate MSE, MAE, and other important statistics. </p>
                 <br>
@@ -62,8 +62,8 @@
 new_client.neural_network_query('Please estimate the number of households.')
 new_client.analyze()</pre>
         </div>
-        <div class="box">
-                <h1 id="nnq">info()</h1>
+        <div class="box" id="ir">
+                <h1>info()</h1>
                 <br>
                 <p>Returns all the keys, representing each category of data generated for the dataset.</p>
                 <br>
@@ -81,7 +81,7 @@ new_client.neural_network_query('Please estimate the number of households.')
 new_client.info() #access plots</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">plots()</h1>
+                <h1>plots()</h1>
                 <br>
                 <p>Displays all of the plots generated for the model it is called on.</p>
                 <br>
@@ -107,7 +107,7 @@ new_client.neural_network_query('Please estimate the number of households.')
 new_client.plots() #access plots</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">vocab()</h1>
+                <h1>vocab()</h1>
                 <br>
                 <p>Returns the vocabulary used for the query. Can only be used for document summarization and image caption.</p>
                 <br>
@@ -129,7 +129,7 @@ new_client.summarization_query('csv_file')
 new_client.vocab() #access vocabulary</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">predict()</h1>
+                <h1>predict()</h1>
                 <br>
                 <p>Automatically fits a neural network to your dataset. Target detection, preprocessing, and scoring are done by default.</p>
                 <br>
@@ -147,7 +147,7 @@ new_client.neural_network_query('Please estimate the number of households.')
 new_client.predict(new_data, model='regression_ANN')</pre>
         </div>
         <div class="box">
-                <h1 id="nnq">model()</h1>
+                <h1>model()</h1>
                 <br>
                 <p>Returns the entire dictionary that a specific model.</p>
                 <br>
