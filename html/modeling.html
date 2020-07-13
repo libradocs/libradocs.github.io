@@ -124,7 +124,11 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                         <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset. Only neccesary if read_mode is 'csvwise'.</td>
                     </tr>
                     <tr>
-                        <td>readmode=distinguisher()</td>
+                        <td>image_column=None</td>
+                        <td>Only used when read_mode is ‘csvwise’. The column title containing the images.</td>
+                    </tr>
+                    <tr>
+                        <td>read_mode=distinguisher()</td>
                         <td>Identifies the format in which data the present in. If none is specified then the query will automatically identify the format of your data. Note that only three types of formats are currently supported (listed in the table below). </td>
                     </tr>
                     <tr>
@@ -136,8 +140,32 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                         <td>If you're using pathwise from a csv, you can by default use a column in the set as the path location.</td>
                     </tr>
                     <tr>
-                        <td>test_size=0.8</td>
-                        <td>Represents the size of the training set.</td>
+                        <td>test_size=0.2</td>
+                        <td>Represents the size of the testing set.</td>
+                    </tr>
+                    <tr>
+                        <td>preprocess=True</td>
+                        <td>Whether you want your dataset to be intelligently preprocessed.</td>
+                    </tr>
+                    <tr>
+                        <td>augmentation=True</td>
+                        <td>Magnifies dataset to add small variation to images before training in the model.</td>
+                    </tr>
+                    <tr>
+                        <td>epochs=10</td>
+                        <td>Number of epochs for every model attempted.</td>
+                    </tr>
+                    <tr>
+                        <td>height=None</td>
+                        <td>Resizes all images to the given height. If left as None, will resize images’ to the median height.</td>
+                    </tr>
+                    <tr>
+                        <td>width=None</td>
+                        <td>Resizes all images to the given width. If left as None, will resize images’ to the median width.</td>
+                    </tr>
+                    <tr>
+                        <td>verbose=0</td>
+                        <td>Whether inner computation is displayed. This will spam the console box.</td>
                     </tr>
                 </table>
                 <pre>newClient = client('path_to_directory_with_image_folders')
