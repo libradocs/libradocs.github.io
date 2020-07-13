@@ -61,7 +61,7 @@
                     </tr>
                     <tr>
                         <td>instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset.</td>
                     </tr>
                     <tr>
                         <td>ca_threshold=0.2</td>
@@ -73,7 +73,7 @@
                     </tr>
                     <tr>
                         <td>text=[]</td>
-                        <td>List of columns that are long sections of text, which need word embeddings.</td>
+                        <td>Represents any columns that contain long pieces of text to be embedded into vectors.</td>
                     </tr>
                     <tr>
                         <td>preprocess=True</td>
@@ -121,7 +121,7 @@ new_client.models['regression_ANN'].plots() #access plots</pre>
                     </tr>
                     <tr>
                         <td>instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset. Only neccesary if read_mode is 'csvwise'.</td>
                     </tr>
                     <tr>
                         <td>readmode=distinguisher()</td>
@@ -182,7 +182,7 @@ newClient.convolutional_query("Please classify my images")</pre>
                     </tr>
                     <tr>
                         <td>instruction</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset.</td>
                     </tr>
                     <tr>
                         <td>test_size=0.2</td>
@@ -190,7 +190,7 @@ newClient.convolutional_query("Please classify my images")</pre>
                     </tr>
                     <tr>
                         <td>text=[]</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>Represents any columns that contain long pieces of text to be embedded into vectors.</td>
                     </tr>
                     <tr>
                         <td>random_state=49</td>
@@ -240,7 +240,7 @@ newClient.svm_query('Model the type of credit card')</pre>
                     </tr>
                     <tr>
                         <td>instruction</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset.</td>
                     </tr>
                     <tr>
                         <td>test_size=0.2</td>
@@ -248,7 +248,7 @@ newClient.svm_query('Model the type of credit card')</pre>
                     </tr>
                     <tr>
                         <td>text=[]</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>Represents any columns that contain long pieces of text to be embedded into vectors.</td>
                     </tr>
                     <tr>
                         <td>random_state=49</td>
@@ -256,7 +256,7 @@ newClient.svm_query('Model the type of credit card')</pre>
                     </tr>
                    <tr>
                         <td>preprocess=True</td>
-                        <td>Whether you want your dataset to be intelligently preprocessed</td>
+                        <td>Whether you want your dataset to be intelligently preprocessed.</td>
                     </tr>
                     <tr>
                         <td>drop=[]</td>
@@ -272,11 +272,11 @@ newClient.svm_query('Model the type of credit card')</pre>
                     </tr>
                     <tr>
                         <td>leaf_size=30</td>
-                        <td>Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. </td>
+                        <td>Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree.</td>
                     </tr>
                     <tr>
                         <td>p=2</td>
-                        <td>Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. </td>
+                        <td>Parameter for the Minkowski metric from sklearn.metrics.pairwise.pairwise_distances. When p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2.</td>
                     </tr>
                     <tr>
                         <td>algorithm='auto'</td>
@@ -297,7 +297,7 @@ newClient.nearest_neighbors_query('Model the type of credit card')</pre>
                     </tr>
                     <tr>
                         <td>instruction</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to a column in the dataset.</td>
                     </tr>
                     <tr>
                     <tr>
@@ -310,7 +310,7 @@ newClient.nearest_neighbors_query('Model the type of credit card')</pre>
                     </tr>
                     <tr>
                         <td>text=[]</td>
-                        <td>Whether you want libra to create accuracy and loss plots for you.</td>
+                        <td>Represents any columns that contain long pieces of text to be embedded into vectors.</td>
                     </tr>
                     <tr>
                         <td>drop=[]</td>

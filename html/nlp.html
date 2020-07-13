@@ -54,7 +54,7 @@
                     </tr>
                     <tr>
                         <td>instruction=None</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to the column of text that you want to classify.</td>
                     </tr>
                     <tr>
                         <td>label_column='label'</td>
@@ -196,7 +196,10 @@ newClient.get_summary('new text to summarize')</pre>
                     <tr>
                         <td colspan="2">Arguments</td>
                     </tr>
-
+                    <tr>
+                        <td>instruction</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to the column of captions in the dataset.</td>
+                    </tr>
                     <tr>
                         <td>drop=None</td>
                         <td>Columns to drop manually, drop columns with links, weirdly formatted numbers, and others.</td>
