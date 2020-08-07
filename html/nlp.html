@@ -28,6 +28,8 @@
                 <li class="dropdown-item selected" data="drp">Text Classification</li>
                 <li class="dropdown-item" data="rff">Document Summarization</li>
                 <li class="dropdown-item" data="pca">Image Caption Generation</li>
+                <li class="dropdown-item" data="pca">Text Generation</li>
+                <li class="dropdown-item" data="pca">Named Entity Recognition</li>
                                     
             <li><a class="nav-tab" href="utility.html">Utility Functions</a></li>
             
@@ -241,6 +243,53 @@ newClient.get_summary('new text to summarize')</pre>
                 <pre>newClient = client('path_to_csv')
 newClient.image_caption_query('Generate image captions')
 newClient.generate_caption('path to image')</pre>
+
+        </div>
+       <div class="box">
+                <h1 id="pca">generate_text()</h1>
+                <br>
+                <p>Automatically generates text of specified length based on initial prefix text. Stored as ‘generated_text’ in models dictionary.</p>
+                <p> <b>Dataset Guidelines</b> </p>
+                <ul>
+                    <li>A text file with the initial part of the text that you want to use to generate the next set of text. </li>
+                    <li>OR just type in the prefix that you want yourself for the prefix argument</li>
+                </ul>
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="2">Arguments</td>
+                    </tr>
+                    <tr>
+                        <td>instruction</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to the column of captions in the dataset.</td>
+                    </tr>
+                    <tr>
+                        <td>file_data=True</td>
+                        <td>Whether or not you want the client file you provided to be the prefix used in generating text</td>
+                    </tr>
+                    <tr>
+                        <td>prefix=None</td>
+                        <td>If file_data is false then what is the prefix you would like to use - string</td>
+                    </tr>
+                    <tr>
+                        <td>maxLength=512</td>
+                        <td>What length do you want your generated text to be.</td>
+                    </tr>
+                    <tr>
+                        <td>top_k=50</td>
+                        <td>He randomization channel that you want to be set at.</td>
+                    </tr>
+                    <tr>
+                        <td>top_p=0.9</td>
+                        <td>Maximum number of elements that will be buffered to be selected for the caption.</td>
+                    </tr>
+                    <tr>
+                        <td>return_sequences=2</td>
+                        <td>How many different variations do you want to be returned</td>
+                    </tr>
+                </table>
+                <pre>newClient = client('path_to_txt’)
+newClient.generate_text(“generate text” file_data=False, prefix=“Hello there!”)</pre>
 
         </div>
         <div id="space"></div>
