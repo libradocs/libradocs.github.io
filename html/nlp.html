@@ -29,7 +29,7 @@
                 <li class="dropdown-item" data="rff">Document Summarization</li>
                 <li class="dropdown-item" data="pca">Image Caption Generation</li>
                 <li class="dropdown-item" data="pca">Text Generation</li>
-                <li class="dropdown-item" data="pca">Named Entity Recognition</li>
+                <li class="dropdown-item" data="ner">Named Entity Recognition</li>
                                     
             <li><a class="nav-tab" href="utility.html">Utility Functions</a></li>
             
@@ -290,6 +290,30 @@ newClient.generate_caption('path to image')</pre>
                 </table>
                 <pre>newClient = client('path_to_txt’)
 newClient.generate_text(“generate text” file_data=False, prefix=“Hello there!”)</pre>
+
+        </div>
+       <div class="box">
+                <h1 id="ner">get_named_entities()</h1>
+                <br>
+                <p>Automatically detects name entities like persons name, geographic locations, organization/companies and addresses from label column containing text.
+Stored as 'named_entity_recognition' in models dictionary.</p>
+                <p> <b>Dataset Guidelines</b> </p>
+                <ul>
+                    <li>The data that you want to extract name entities from should be the target of the instruction. For example, if you want to extract name entities from text column, the instruction could be 'extract ner from text'. or simple 'text'</li>
+                    <li>Your instruction should be about the label column, not the text.</li>
+                </ul>
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="2">Arguments</td>
+                    </tr>
+                    <tr>
+                        <td>instruction</td>
+                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to the column of captions in the dataset.</td>
+                    </tr>
+                </table>
+                <pre>newClient = client('path_to_txt’)
+newClient.get_named_entities('detect from text')</pre>
 
         </div>
         <div id="space"></div>
