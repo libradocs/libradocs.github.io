@@ -27,7 +27,7 @@
             <li class="nav-tab selected" href="nlp.html">NLP Queries</li>
                 <li class="dropdown-item selected" data="drp">Text Classification</li>
                 <li class="dropdown-item" data="rff">Document Summarization</li>
-                <li class="dropdown-item" data="pca">Image Caption Generation</li>
+                <li class="dropdown-item" data="img">Image Caption Generation</li>
                 <li class="dropdown-item" data="pca">Text Generation</li>
                 <li class="dropdown-item" data="ner">Named Entity Recognition</li>
                                     
@@ -185,7 +185,7 @@ newClient.summarization_query("Please summarize original text")
 newClient.get_summary('new text to summarize')</pre>
         </div>
         <div class="box">
-                <h1 id="pca">image_caption_query()</h1>
+                <h1 id="img">image_caption_query()</h1>
                 <br>
                 <p>Automatically fits an caption generation transfer learning model to your dataset. This model will have frozen layers with pretrained weights to help with small dataset sizes. Stored as 'image_caption' in models dictionary.</p>
                 <p> <b>Dataset Guidelines</b> </p>
