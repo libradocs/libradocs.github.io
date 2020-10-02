@@ -261,16 +261,16 @@ newClient.generate_caption('path to image')</pre>
                         <td colspan="2">Arguments</td>
                     </tr>
                     <tr>
-                        <td>instruction</td>
-                        <td>An English language statement that represents the task you would like to be completed. eg: 'predict the median house value' or 'please estimate the number of households'. Should correspond to the column of captions in the dataset.</td>
-                    </tr>
-                    <tr>
                         <td>file_data=True</td>
                         <td>Whether or not you want the client file you provided to be the prefix used in generating text</td>
                     </tr>
                     <tr>
                         <td>prefix=None</td>
                         <td>If file_data is false then what is the prefix you would like to use - string</td>
+                    </tr>
+                    <tr>
+                        <td>tempreture=0.3</td>
+                        <td>The temperature to make the next word probability distribution sharper (float).</td>
                     </tr>
                     <tr>
                         <td>maxLength=512</td>
