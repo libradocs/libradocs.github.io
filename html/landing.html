@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-			Hugging Face – On a mission to solve NLP, one commit at a time.
+			Libra: Ergonomic machine learning for everyone.
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="../css/landing2.css">
@@ -26,8 +26,7 @@
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="menu primer">
-				<a class="neo-link" href="/models">🚀 Models</a>
-				<a class="neo-link" href="/pricing">⚡️ Inference API</a>
+				<a class="neo-link" href="/pricing">API Docs</a>
 				
 				<details class="dropdown details-reset">
 					<summary class="nav-menu">
@@ -47,30 +46,10 @@
 						<li>
 							<a href="/languages" class="dropdown-item">Languages</a>
 						</li>
-						<li class="dropdown-divider"></li>
-						<li>
-							<a href="/docs" class="dropdown-item">Model Hub doc</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://api-inference.huggingface.co/docs/" class="dropdown-item">Inference API doc ⚡️</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://huggingface.co/transformers" class="dropdown-item">Transformers doc 📖</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://huggingface.co/docs/datasets" class="dropdown-item">Datasets doc 📖</a>
-						</li>
-						<li class="dropdown-divider"></li>
-						<li>
-							<a href="/blog" class="dropdown-item">Blog</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://discuss.huggingface.co" class="dropdown-item">Forum 💬</a>
-						</li>
 					</ul>
 				</details>
 				
-					<a class="nav-link" href="/welcome">🔥 Sign in</a>
+					<a class="nav-link" href="https://github.com/Palashio/Libra">GitHub</a>
 				
 			</div>
 			
@@ -91,276 +70,19 @@
 			<img class="logo" src="../resources/newlogo.png">
 		</a>
 	</div>
+
 	
-	<svg class="logo-text" viewBox="0 0 263 25">
-		<use href="/front/assets/huggingface_text.svg#text"></use>
-	</svg>
-	
-	<div class="tagline">On a mission to solve NLP,<br>one commit at a time.</div>
+	<h1>Libra</h1>
+	<div class="tagline">Ergonomic machine learning for everyone.</div>
 	<div class="github-repo">
 		<a 
 			class="github-button"
-			href="https://github.com/huggingface/transformers" data-size="large" data-show-count="true" aria-label="Star huggingface/transformers on GitHub">
+			href="https://github.com/Palashio/Libra" data-size="large" data-show-count="true" aria-label="Star huggingface/transformers on GitHub">
 			Star
 		</a>
 	</div>
 </div>
 
-<div class="container">
-	<div class="footline"></div>
-	
-	<div class="objects-search">
-		<div class="search-container">
-			<input
-				class="search"
-				type="text"
-				tabindex="1"
-				placeholder="Search models..."
-				
-			>
-		</div>
-		<div class="search-filters primer">
-			<details class="
-				dropdown details-reset js-search_filter
-				"
-			>
-				<summary class="btn-adaptive">
-					<span>Tags: All</span>
-					<div class="dropdown-caret"></div>
-				</summary>
-				<div class="dropdown-menu dropdown-menu-sw">
-					<div class="dropdown-header">
-						Filter by model tags
-					</div>
-					<div class="dropdown-item  active" id="all">
-						<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-							<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-						</svg>
-						<span class="name">All</span>
-					</div>
-						<div class="dropdown-item  " id="pytorch">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">PyTorch</span>
-						</div>
-						<div class="dropdown-item  " id="tf">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">TensorFlow</span>
-						</div>
-						<div class="dropdown-item  " id="tfsavedmodel">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">TF SavedModel</span>
-						</div>
-						<div class="dropdown-item  " id="tflite">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">TF Lite</span>
-						</div>
-						<div class="dropdown-item  " id="rust">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Rust Model</span>
-						</div>
-						<div class="dropdown-item  " id="lm-head">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">lm-head</span>
-						</div>
-						<div class="dropdown-item  " id="text-classification">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">text-classification 📖</span>
-						</div>
-						<div class="dropdown-item  " id="token-classification">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">token-classification 🏷</span>
-						</div>
-						<div class="dropdown-item  " id="question-answering">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">question-answering ❓</span>
-						</div>
-						<div class="dropdown-item  " id="multiple-choice">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">multiple-choice 🔘</span>
-						</div>
-						<div class="dropdown-item  " id="summarization">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">summarization 📋</span>
-						</div>
-						<div class="dropdown-item  " id="translation">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">translation 🇺🇳</span>
-						</div>
-						<div class="dropdown-item  " id="conversational">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">conversational 💬</span>
-						</div>
-						<div class="dropdown-item  " id="exbert">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">ExBERT 📊</span>
-						</div>
-						<div class="dropdown-item  " id="fr">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">French 🇫🇷</span>
-						</div>
-						<div class="dropdown-item  " id="de">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">German 🇩🇪</span>
-						</div>
-						<div class="dropdown-item  " id="nl">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Dutch 🇳🇱</span>
-						</div>
-						<div class="dropdown-item  " id="it">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Italian 🇮🇹</span>
-						</div>
-						<div class="dropdown-item  " id="es">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Spanish 🇪🇸</span>
-						</div>
-						<div class="dropdown-item  " id="sv">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Swedish 🇸🇪</span>
-						</div>
-						<div class="dropdown-item  " id="fi">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Finnish 🇫🇮</span>
-						</div>
-						<div class="dropdown-item  " id="el">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Greek 🇬🇷</span>
-						</div>
-						<div class="dropdown-item  " id="tr">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Turkish 🇹🇷</span>
-						</div>
-						<div class="dropdown-item  " id="ar">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Arabic 🟢 ض</span>
-						</div>
-						<div class="dropdown-item  " id="zh">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Chinese 🇨🇳</span>
-						</div>
-						<div class="dropdown-item  " id="ms">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Malay 🇲🇾</span>
-						</div>
-						<div class="dropdown-item  " id="pl">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Polish 🇵🇱</span>
-						</div>
-						<div class="dropdown-item  " id="ro">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Romanian 🇷🇴</span>
-						</div>
-						<div class="dropdown-item  " id="eo">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Esperanto</span>
-						</div>
-						<div class="dropdown-item  " id="multilingual">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Multilingual 🌍</span>
-						</div>
-						<div class="dropdown-header">
-							<a href="/languages"><small>&emsp; &ensp; See all languages</small></a>
-						</div>
-				</div>
-			</details>
-			
-			<details class="dropdown details-reset js-search_sort">
-				<summary class="btn-adaptive">
-						<span>Sort: Most downloads</span>
-					<div class="dropdown-caret"></div>
-				</summary>
-				<div class="dropdown-menu dropdown-menu-sw">
-					<div class="dropdown-header">
-						Sort options
-					</div>
-						<div class="dropdown-item  active" id="default">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Most downloads</span>
-						</div>
-						<div class="dropdown-item  " id="alphabetical">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Alphabetical</span>
-						</div>
-						<div class="dropdown-item  " id="natural">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">S3 order</span>
-						</div>
-						<div class="dropdown-item  " id="modified">
-							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
-								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
-							</svg>
-							<span class="name">Recently updated</span>
-						</div>
-				</div>
-			</details>
-		</div>
-	</div></div>
 
 
 <div class="section-science" id="science">
@@ -523,14 +245,14 @@
 
 <div class="section-tools">
 	<div class="container container-blogposts">
-		<div class="smallcaps">Major blog posts</div>
+		<div class="smallcaps">Top Blog Posts</div>
 		<div class="row">
 			<div class="item">
 				<div class="title">
-					<a target="_blank" href="https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255">Training Neural Nets on Larger Batches: Practical Tips for 1-GPU, Multi-GPU &amp; Distributed setups</a>
+					<a target="_blank" href="https://towardsdatascience.com/how-to-implement-any-machine-learning-project-with-3-lines-of-code-bf167e4c2a0b">How to Implement Any Machine Learning Project with 3 Lines of Code</a>
 				</div>
 				<div class="content">
-					We spend a lot of time training models that can barely fit 1-4 samples/GPU. But SGD usually needs more than few samples/batch for decent results. Here is a post gathering practical tips we use, from simple tricks to multi-GPU code &amp; distributed setups.
+					Wouldn’t it be great to be able to solve complex machine learning problems quickly and without extensive knowledge of the amazing TensorFlow or PyTorch frameworks?
 				</div>
 			</div>
 			<div class="item">
@@ -564,43 +286,11 @@
 	<div class="smallcaps">
 		<img src="/front/assets/ui/icon-view-more.svg">
 		View more on 
-		<a target="_blank" href="https://medium.com/huggingface">Medium</a>
+		<a target="_blank" href="https://github.com/Palashio/awesome-libra">awesome-repo</a>
 		· 
-		<a href="/blog">Blog</a>
-		· 
-		<a href="/privacy">Privacy</a>
-		· 
-		<a target="_blank" href="https://angel.co/hugging-face/">Jobs</a>
+		<a href="https://github.com/Palashio/Libra">GitHub</a>
 	</div>
 </div>
 
-
-	
-	<script>
-	(function() {
-		if (
-			['localhost', 'huggingface.test'].includes(window.location.hostname)
-			|| window.location.hostname.includes('ngrok.io')
-		) {
-			console.log('[livereload]', 'on');
-			const s = document.createElement('script');
-			s.setAttribute('src', '//localhost:35729/livereload.js');
-			document.body.appendChild(s);
-		}
-	})();
-	</script>
-	<script>
-	if (! (
-		['localhost', 'huggingface.test'].includes(window.location.hostname)
-		|| window.location.hostname.includes('ngrok.io')
-	)) {
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ganalytics');
-		ganalytics('create', 'UA-83738774-2', 'auto');
-		ganalytics('send', 'pageview');
-	}
-	</script>
 </body>
 </html>
