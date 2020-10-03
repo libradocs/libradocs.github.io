@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+			Hugging Face – On a mission to solve NLP, one commit at a time.
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/landing2.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+	
+		<meta property="og:title" content="Hugging Face – On a mission to solve NLP, one commit at a time.">
+	<meta property="og:type"   content="website">
+	<meta property="og:url"    content="https://huggingface.co/">
+			<meta property="og:image"  content="https://huggingface.co/front/thumbnails/30k.png">
+	<meta property="fb:app_id" content="1321688464574422">
+	<meta name="twitter:card"  content="summary_large_image">
+	<meta name="twitter:site"  content="@huggingface">
+	<meta name="description"   content="We’re on a journey to solve and democratize artificial intelligence through natural language.">
+	
+	<script defer src="/front/assets/github-buttons.js"></script>
+	<script defer src="/front/build/bundle.b7a5899.js"></script>
+</head>
+<body class="home">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="menu primer">
+				<a class="neo-link" href="/models">🚀 Models</a>
+				<a class="neo-link" href="/pricing">⚡️ Inference API</a>
+				
+				<details class="dropdown details-reset">
+					<summary class="nav-menu">
+						<img src="/front/assets/icon-menu.svg">
+						<div class="dropdown-caret"></div>
+					</summary>
+					<ul class="dropdown-menu dropdown-menu-sw">
+						<li>
+							<a href="/models" class="dropdown-item">Models</a>
+						</li>
+						<li>
+							<a href="/datasets" class="dropdown-item">Datasets</a>
+						</li>
+						<li>
+							<a href="/metrics" class="dropdown-item">Metrics</a>
+						</li>
+						<li>
+							<a href="/languages" class="dropdown-item">Languages</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="/docs" class="dropdown-item">Model Hub doc</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://api-inference.huggingface.co/docs/" class="dropdown-item">Inference API doc ⚡️</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://huggingface.co/transformers" class="dropdown-item">Transformers doc 📖</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://huggingface.co/docs/datasets" class="dropdown-item">Datasets doc 📖</a>
+						</li>
+						<li class="dropdown-divider"></li>
+						<li>
+							<a href="/blog" class="dropdown-item">Blog</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://discuss.huggingface.co" class="dropdown-item">Forum 💬</a>
+						</li>
+					</ul>
+				</details>
+				
+					<a class="nav-link" href="/welcome">🔥 Sign in</a>
+				
+			</div>
+			
+				<auto-complete src="/api/quicksearch" for="items-popup">
+					<input
+						type="text"
+						placeholder="Search models, datasets, users..."
+					>
+					<ul class="autocomplete-results" name="items-popup" hidden></ul>
+				</auto-complete>
+		</div>
+	</div>
+	
+	
+<div class="container container-landing section-landing">
+	<div class="clearfix">
+		<a href="/">
+			<img class="logo" src="/front/assets/huggingface_logo.svg">
+		</a>
+	</div>
+	
+	<svg class="logo-text" viewBox="0 0 263 25">
+		<use href="/front/assets/huggingface_text.svg#text"></use>
+	</svg>
+	
+	<div class="tagline">On a mission to solve NLP,<br>one commit at a time.</div>
+	<div class="github-repo">
+		<a 
+			class="github-button"
+			href="https://github.com/huggingface/transformers" data-size="large" data-show-count="true" aria-label="Star huggingface/transformers on GitHub">
+			Star
+		</a>
+	</div>
+</div>
+
+<div class="container">
+	<div class="footline"></div>
+	
+	<div class="objects-search">
+		<div class="search-container">
+			<input
+				class="search"
+				type="text"
+				tabindex="1"
+				placeholder="Search models..."
+				
+			>
+		</div>
+		<div class="search-filters primer">
+			<details class="
+				dropdown details-reset js-search_filter
+				"
+			>
+				<summary class="btn-adaptive">
+					<span>Tags: All</span>
+					<div class="dropdown-caret"></div>
+				</summary>
+				<div class="dropdown-menu dropdown-menu-sw">
+					<div class="dropdown-header">
+						Filter by model tags
+					</div>
+					<div class="dropdown-item  active" id="all">
+						<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+							<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+						</svg>
+						<span class="name">All</span>
+					</div>
+						<div class="dropdown-item  " id="pytorch">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">PyTorch</span>
+						</div>
+						<div class="dropdown-item  " id="tf">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">TensorFlow</span>
+						</div>
+						<div class="dropdown-item  " id="tfsavedmodel">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">TF SavedModel</span>
+						</div>
+						<div class="dropdown-item  " id="tflite">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">TF Lite</span>
+						</div>
+						<div class="dropdown-item  " id="rust">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Rust Model</span>
+						</div>
+						<div class="dropdown-item  " id="lm-head">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">lm-head</span>
+						</div>
+						<div class="dropdown-item  " id="text-classification">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">text-classification 📖</span>
+						</div>
+						<div class="dropdown-item  " id="token-classification">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">token-classification 🏷</span>
+						</div>
+						<div class="dropdown-item  " id="question-answering">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">question-answering ❓</span>
+						</div>
+						<div class="dropdown-item  " id="multiple-choice">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">multiple-choice 🔘</span>
+						</div>
+						<div class="dropdown-item  " id="summarization">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">summarization 📋</span>
+						</div>
+						<div class="dropdown-item  " id="translation">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">translation 🇺🇳</span>
+						</div>
+						<div class="dropdown-item  " id="conversational">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">conversational 💬</span>
+						</div>
+						<div class="dropdown-item  " id="exbert">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">ExBERT 📊</span>
+						</div>
+						<div class="dropdown-item  " id="fr">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">French 🇫🇷</span>
+						</div>
+						<div class="dropdown-item  " id="de">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">German 🇩🇪</span>
+						</div>
+						<div class="dropdown-item  " id="nl">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Dutch 🇳🇱</span>
+						</div>
+						<div class="dropdown-item  " id="it">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Italian 🇮🇹</span>
+						</div>
+						<div class="dropdown-item  " id="es">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Spanish 🇪🇸</span>
+						</div>
+						<div class="dropdown-item  " id="sv">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Swedish 🇸🇪</span>
+						</div>
+						<div class="dropdown-item  " id="fi">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Finnish 🇫🇮</span>
+						</div>
+						<div class="dropdown-item  " id="el">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Greek 🇬🇷</span>
+						</div>
+						<div class="dropdown-item  " id="tr">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Turkish 🇹🇷</span>
+						</div>
+						<div class="dropdown-item  " id="ar">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Arabic 🟢 ض</span>
+						</div>
+						<div class="dropdown-item  " id="zh">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Chinese 🇨🇳</span>
+						</div>
+						<div class="dropdown-item  " id="ms">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Malay 🇲🇾</span>
+						</div>
+						<div class="dropdown-item  " id="pl">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Polish 🇵🇱</span>
+						</div>
+						<div class="dropdown-item  " id="ro">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Romanian 🇷🇴</span>
+						</div>
+						<div class="dropdown-item  " id="eo">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Esperanto</span>
+						</div>
+						<div class="dropdown-item  " id="multilingual">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Multilingual 🌍</span>
+						</div>
+						<div class="dropdown-header">
+							<a href="/languages"><small>&emsp; &ensp; See all languages</small></a>
+						</div>
+				</div>
+			</details>
+			
+			<details class="dropdown details-reset js-search_sort">
+				<summary class="btn-adaptive">
+						<span>Sort: Most downloads</span>
+					<div class="dropdown-caret"></div>
+				</summary>
+				<div class="dropdown-menu dropdown-menu-sw">
+					<div class="dropdown-header">
+						Sort options
+					</div>
+						<div class="dropdown-item  active" id="default">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Most downloads</span>
+						</div>
+						<div class="dropdown-item  " id="alphabetical">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Alphabetical</span>
+						</div>
+						<div class="dropdown-item  " id="natural">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">S3 order</span>
+						</div>
+						<div class="dropdown-item  " id="modified">
+							<svg viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true">
+								<path d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path>
+							</svg>
+							<span class="name">Recently updated</span>
+						</div>
+				</div>
+			</details>
+		</div>
+	</div></div>
+
+
+<div class="section-science" id="science">
+	<div class="container container-science">
+		<div class="smallcaps">
+			<img src="/front/assets/ui/icon-science.svg">
+			Tech &amp; science
+		</div>
+		<div class="title">Our science contributions</div>
+		<div class="subtitle">
+			We’re on a journey to advance and democratize NLP for everyone.
+			Along the way, we contribute to the development of technology for the better.
+		</div>
+		
+		<div class="row">
+			<div class="cover-wrapper">
+				<a target="_blank" href="https://arxiv.org/abs/1811.06031">
+					<div class="cover cover-standard cover-hmtl" data-tilt>
+						<div class="cover-inner">
+							<div class="cover-title large text-center">HMTL</div>
+							<div class="cover-author text-center">Victor Sanh et al.<br>AAAI 2019</div>
+							<div class="cover-bottom">
+								<img src="/front/assets/ui/icon-cube.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<div class="cover-details">
+					<h4 class="typo">Hierarchical Multi-Task Learning</h4>
+					<div class="details">
+						Our <a target="_blank" href="https://arxiv.org/abs/1811.06031">paper</a> has been accepted to AAAI 2019. 💥 We have open-sourced 
+						<a target="_blank" href="https://github.com/huggingface/hmtl">code</a> and <a target="_blank" href="https://huggingface.co/hmtl/">demo</a>. 🎮
+					</div>
+				</div>
+			</div>
+			
+			<div class="cover-wrapper">
+				<a target="_blank" href="https://github.com/huggingface/transformers">
+					<div class="cover cover-standard cover-transformers" data-tilt>
+						<div class="cover-inner">
+							<div class="cover-title large text-center">Transformers</div>
+							<div class="cover-author text-center">30k+ stars on GitHub</div>
+							<div class="cover-bottom">
+								<img src="/front/assets/ui/icon-lightning.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<div class="cover-details">
+					<h4 class="typo">A Passionate Community</h4>
+					<div class="details">
+						Our popular State-of-the-art NLP framework.
+						Thousands of developers <a target="_blank" href="https://github.com/huggingface/transformers/pulse">contribute</a> code and weights.
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<a target="_blank" href="https://transformer.huggingface.co">
+			<div class="home-thumbnail">
+				<img class="thumbnail" src="https://transformer.huggingface.co/front/assets/unicorn-tweaked.svg">
+				<div class="bfc">
+					<div class="thumbnail-title">Write With Transformer</div>
+					<div class="thumbnail-subtitle">transformer.huggingface.co</div>
+				</div>
+			</div>
+		</a>
+		
+		<a target="_blank" href="https://medium.com/huggingface/distilbert-8cf3380435b5">
+			<div class="row">
+				<div class="cover cover-fat cover-distilbert" data-tilt>
+					<div class="cover-inner">
+						<div class="cover-title large">DistilBERT</div>
+						<div class="cover-author">Victor Sanh et al. 2019</div>
+						<div class="cover-subtitle small">
+							Distilllation. A smaller, faster, lighter, cheaper version of BERT.<br>
+							Code and weights are available through Transformers.
+						</div>
+						<div class="cover-bottom">
+							🐎 🐎 🐎
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		
+		<a target="_blank" href="https://arxiv.org/abs/1901.08149">
+			<div class="row">
+				<div class="cover cover-fat cover-transfertransfo" data-tilt>
+					<div class="cover-inner">
+						<div class="cover-title large">Transfer-Transfo</div>
+						<div class="cover-subtitle small">A Transfer Learning approach to Natural Language Generation. A workshop paper on the Transfer Learning approach we used to win the automatic metrics part of the Conversational Intelligence Challenge 2 at NeurIPS 2018.</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		
+		<div class="row">
+			<div class="cover-wrapper">
+				<a target="_blank" href="https://arxiv.org/abs/1803.10631">
+					<div class="cover cover-standard cover-mllm" data-tilt>
+						<div class="cover-inner">
+							<div class="cover-title">Meta-learning for language modeling</div>
+							<div class="cover-author">Thomas Wolf et al.<br>ICLR 2018</div>
+							<div class="cover-bottom">
+								<img src="/front/assets/ui/icon-network.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<div class="cover-details">
+					<h4 class="typo">Cutting-edge research</h4>
+					<div class="details">
+						Our <a target="_blank" href="https://arxiv.org/pdf/1803.10631.pdf">workshop paper</a> on Meta-Learning a Dynamical Language Model was accepted to 
+						<a target="_blank" href="https://iclr.cc/">ICLR 2018</a> 💪💪.
+						We use our implementation to power 🤗.
+					</div>
+				</div>
+			</div>
+			
+			<div class="cover-wrapper">
+				<a target="_blank" href="https://huggingface.co/coref">
+					<div class="cover cover-standard cover-neuralcoref" data-tilt>
+						<div class="cover-inner">
+							<div class="cover-title large text-center">Neuralcoref</div>
+							<div class="cover-author text-center">State-of-the-art coreference resolution</div>
+							<div class="cover-bottom">
+								<img src="/front/assets/ui/icon-pentagon.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<div class="cover-details">
+					<h4 class="typo">Openness</h4>
+					<div class="details">
+						Our coreference resolution module is now the
+						<a target="_blank" href="https://github.com/huggingface/neuralcoref">top open source library</a> for coreference.
+						You can <a target="_blank" href="https://medium.com/huggingface/how-to-train-a-neural-coreference-model-neuralcoref-2-7bb30c1abdfe">train it</a> 
+						on your own dataset and language.
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<a target="_blank" href="https://medium.com/huggingface/understanding-emotions-from-keras-to-pytorch-3ccb61d5a983">
+			<div class="row">
+				<div class="cover cover-fat cover-torchmoji" data-tilt>
+					<div class="cover-inner">
+						<div class="cover-title large">TorchMoji</div>
+						<div class="cover-subtitle large">State-of-the-art emotion detection</div>
+						<div class="cover-bottom">
+							🔥 😰 😇 😊
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<div class="section-tools">
+	<div class="container container-blogposts">
+		<div class="smallcaps">Major blog posts</div>
+		<div class="row">
+			<div class="item">
+				<div class="title">
+					<a target="_blank" href="https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255">Training Neural Nets on Larger Batches: Practical Tips for 1-GPU, Multi-GPU &amp; Distributed setups</a>
+				</div>
+				<div class="content">
+					We spend a lot of time training models that can barely fit 1-4 samples/GPU. But SGD usually needs more than few samples/batch for decent results. Here is a post gathering practical tips we use, from simple tricks to multi-GPU code &amp; distributed setups.
+				</div>
+			</div>
+			<div class="item">
+				<div class="title">
+					<a target="_blank" href="https://medium.com/huggingface/100-times-faster-natural-language-processing-in-python-ee32033bdced">100 Times Faster Natural Language Processing in Python</a>
+				</div>
+				<div class="content">
+					How you can make your Python NLP module 50-100 times faster by use spaCy's internals and a bit of Cython magic! Comes with a Jupyter notebook with examples processing over 80 millions words per sec!
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item">
+				<div class="title">
+					<a target="_blank" href="https://medium.com/huggingface/universal-word-sentence-embeddings-ce48ddc8fc3a">The Current Best of Universal Word Embeddings and Sentence Embeddings</a>
+				</div>
+				<div class="content">
+					A post summarizing recent developments in Universal Word/Sentence Embeddings that happened over 2017/early-2018 and future trends. With ELMo, InferSent, Google's Universal Sentence embeddings, learning by multi-tasking...
+				</div>
+			</div>
+			<div class="item">
+				<div class="title">
+					<a target="_blank" href="https://medium.com/huggingface/from-zero-to-research-an-introduction-to-meta-learning-8e16e677f78a">From zero to research — An introduction to Meta-learning</a>
+				</div>
+				<div class="content">
+					To introduce the work we presented at ICLR 2018, we drafted a visual &amp; intuitive introduction to Meta-Learning. In this post, we start by explaining what’s meta-learning in a very visual and intuitive way. Then, we code a meta-learning model in PyTorch and share some of the lessons learned on this project.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="smallcaps">
+		<img src="/front/assets/ui/icon-view-more.svg">
+		View more on 
+		<a target="_blank" href="https://medium.com/huggingface">Medium</a>
+		· 
+		<a href="/blog">Blog</a>
+		· 
+		<a href="/privacy">Privacy</a>
+		· 
+		<a target="_blank" href="https://angel.co/hugging-face/">Jobs</a>
+	</div>
+</div>
+
+
+	
+	<script>
+	(function() {
+		if (
+			['localhost', 'huggingface.test'].includes(window.location.hostname)
+			|| window.location.hostname.includes('ngrok.io')
+		) {
+			console.log('[livereload]', 'on');
+			const s = document.createElement('script');
+			s.setAttribute('src', '//localhost:35729/livereload.js');
+			document.body.appendChild(s);
+		}
+	})();
+	</script>
+	<script>
+	if (! (
+		['localhost', 'huggingface.test'].includes(window.location.hostname)
+		|| window.location.hostname.includes('ngrok.io')
+	)) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ganalytics');
+		ganalytics('create', 'UA-83738774-2', 'auto');
+		ganalytics('send', 'pageview');
+	}
+	</script>
+</body>
+</html>
